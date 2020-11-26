@@ -18,4 +18,4 @@ plot(p(t),sqrt_J2(t),'linewidth',2), grid on;
 set(gca,'fontname', 'Times New Roman');
 xlabel('$p$','Interpreter','latex','fontsize',15);
 ylabel('$\sqrt{J_2}$','Interpreter','latex','fontsize',15);
-title('Loading path','fontsize',15');
+title('Loading path','fontsize',15);

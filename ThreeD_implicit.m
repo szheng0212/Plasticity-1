@@ -1,15 +1,15 @@
 clc;clear;
 %Define constants
 global G K H c0 eta eta_bar xi delta_gamma;
-G=7.69e6; v=0.3;
+G=10e6; v=0.25;
 K=2*G*(1+v)/(3-6*v);
-H=-100e3;
+H=-1000e3;
 n_max=100;
 inc_e_1=-0.0001;
-stress_c=-50e3;          %Confining pressure unit:Pa
+stress_c=-100e3;          %Confining pressure unit:Pa
 c0=10e3;
 e_tol=1.0e-3;%tolerant error
-phi=0/180*pi;%frictional angle
+phi=30/180*pi;%frictional angle
 eta=6*sin(phi)/sqrt(3)/(3+sin(phi));
 xi=6*cos(phi)/sqrt(3)/(3+sin(phi));
 psi=0/180*pi;%dilantancy angle
