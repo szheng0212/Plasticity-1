@@ -13,7 +13,7 @@ m=zeros(7,1);
 m(1)=1/3;m(2)=1/3;m(3)=1/3;
 %m=transpose(m);
 
-syms sg11 sg12 sg21 sg22 sg33 cp13 cp23;
+syms sg11 sg12 sg21 sg22 sg33 cp13 cp23 eta eta_bar;
 syms lamda G Gc
 sigma=transpose([sg11 sg22 sg33 sg12 sg21 cp13 cp23]);
 sigma_s=transpose([sg11 sg22 sg33 (sg12+sg21)/2 (sg21+sg12)/2 cp13 cp23]);
@@ -25,3 +25,6 @@ De1=lamda*ones(3,3)+2*G*eye(3);
 De2=[G+Gc G-Gc;G-Gc G+Gc];
 De3=2*G*eye(2);
 De=blkdiag(De1,De2,De3);
+dfdsigma=0.5*P*sigma/sqrt(0.5*transpose(sigma)*P*sigma)+ eta*m;
+dgdsigma=0.5*P*sigma/sqrt(0.5*transpose(sigma)*P*sigma)+ eta_bar*m;
+

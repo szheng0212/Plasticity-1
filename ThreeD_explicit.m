@@ -15,7 +15,7 @@ xi=6*cos(phi)/sqrt(3)/(3+sin(phi));
 psi=0/180*pi;%dilantancy angle
 eta_bar=6*sin(psi)/sqrt(3)/(3+sin(psi));
 
-path=1;    % 1 for oedometer test; 2 for undrained triaxial compression; 3 for simple shear
+path=3;    % 1 for oedometer test; 2 for undrained triaxial compression; 3 for simple shear
 % Define the strain arrays
 if path==1
     delta_eps=[inc_e_1*1.0,0.0,0.0,0.0,0.0,0];% oedometer test

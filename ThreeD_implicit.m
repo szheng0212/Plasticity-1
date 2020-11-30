@@ -3,7 +3,7 @@ clc;clear;
 global G K H c0 eta eta_bar xi delta_gamma;
 G=10e6; v=0.25;
 K=2*G*(1+v)/(3-6*v);
-H=-1000e3;
+H=-5e6;
 n_max=100;
 inc_e_1=-0.0001;
 stress_c=-100e3;          %Confining pressure unit:Pa
